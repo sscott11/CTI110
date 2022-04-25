@@ -1,1 +1,36 @@
 /*CSS for site */
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+}
+h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+p, td, th, a{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main{
+    margin: 20px;
+}
+table{
+    margin: 0 auto;
+}
+th, td, thead {
+    padding: 5px 10px;
+}
+.navMenu{
+    background-color: #dbf3fa;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.navMenu a{
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
