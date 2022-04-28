@@ -1,4 +1,12 @@
 /*CSS for site */
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+
+}
+header{
+
+}
 h1{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-transform: uppercase;
@@ -11,12 +19,15 @@ h3{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
-p, td, th, a{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+
 main{
     margin: 20px;
 }
+ header > img{
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
 table{
     margin: 0 auto;
 }
@@ -24,13 +35,53 @@ th, td, thead {
     padding: 5px 10px;
 }
 .navMenu{
-    background-color: #dbf3fa;
-    padding: 10px;
+    background-color: black;
     display: flex;
+    padding: 10px;
     justify-content: space-evenly;
 }
 .navMenu a{
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+}
+.navMenu a:hover, .highlightedNav{
+    background-color: #C40202;
+    border-radius: 5px;
+
+}
+button{
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    background-color: blue;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+label{
+    font-size: 16px;
+    margin-right: 10px;
+}
+input{
+    padding: 10px;
+    color: black;
+    border-radius: 5px;
+    font-size: 16px;
+}
+fieldset{
+    padding: 20px;
+    margin-bottom: 10px;
+}
+fieldset > legend{
+    font-weight: bold;
+    font-size: 20px;
+
+}
+body{
+    background-color: #2E2C2C;
+
 }

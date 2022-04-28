@@ -13,7 +13,7 @@
             <a href="2-hr-portal.html">Home</a>
             <a href="searchByLastName.html">Search By Last Name</a>
             <a href="searchByJobTitle.html">Search By Job Title</a>
-            <a href="searchByDepartment.html">Search By Department</a>
+            <a href="searchByDepartment.html" class="highlightedNav">Search By Department</a>
             <a href="fuel_calculator.html">Fuel Calculator</a>
         </nav>
     </header>

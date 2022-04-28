@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=width-device initial-scale=1.0">
     <title>EGO CSS Human Resources</title>
     <link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
+
 <body>
     <header id="top">
         <img src="img\projectLogoBanner.jpg" width="100%;">
         <nav class="navMenu">
             <a href="2-hr-portal.html">Home</a>
-            <a href="searchByLastName.html">Search By Last Name</a>
+            <a href="searchByLastName.html" class="highlightedNav">Search By Last Name</a>
             <a href="searchByJobTitle.html">Search By Job Title</a>
-            <a href="searchByDepartment.html">Search By Department</a>
+            <a href="searchByDepartment.php">Search By Department</a>
             <a href="fuel_calculator.html">Fuel Calculator</a>
         </nav>
     </header>
     <main>
         <h1>Search By Last Name</h1>
-        <div class="search">
-            <label for="lastName">Last Name: </label>
-            <input id="lastName"></select>
-            <button type="button">Search</button>
-        </div>
+        <form id="employeeDatabase" action="#" method="post">
+            <fieldset>
+                <legend class="labels">Employee Last Name</legend>
+                <label for="lastName">Enter the Employee Last Name</label>
+                <input type="text" id="lastName" name="name" required />
+            </fieldset>
+        </form>
+        <button class="labels" type="submit" form="employeeDatabase">SUBMIT</button>
     </main>
 </body>
+
 </html>
