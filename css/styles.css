@@ -53,6 +53,13 @@ th, td, thead {
     border-radius: 5px;
 
 }
+select{
+	color:black;
+}
+
+.dynList{
+	color:black;
+}
 button{
     border: none;
     padding: 10px 20px;
