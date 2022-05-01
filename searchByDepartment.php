@@ -31,7 +31,7 @@
 				<?php
 					foreach ($result as $row)
 					{
-						echo "<option value='".$row['department_id']."'>".$row['department_name']."</option>";
+						echo "<option class='dynList' value='".$row['department_id']."'>".$row['department_name']."</option>";
 					}
 				?>				
 				</select>
