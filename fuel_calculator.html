@@ -19,7 +19,25 @@
     </header>
     <main>
         <h1>Fuel Calculator</h1>
+        <p><b>This program was created to help estimate the cost for a road trip. You need to know the approximate cost of gas, your car's mpg, and the distance the trip.</b></p> 
+  
+        
+              <form id="calculator" action="calculator.php" method="post">
+                  <fieldset>
+                      <legend class="labels">Fuel Cost Calculator</legend>  
+                      <label>Estimated Fuel Cost</label>
+                          <input type="text" name="fuel" required><br>
+                      
+                      <label>Car's MPG</label>     
+                          <input type="text" name="mpg" required><br>
+                      
+                      <label>Trip Distance (Miles)</label>
+                          <input type="text" name="distance" required><br>
+                  </fieldset>        
+              </form>
 
+              <button class="labels" type="submit" form="calculator">Submit</button>  
+         
 
 
 
