@@ -3,14 +3,17 @@ body {
     background-color: #2E2C2C;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 header {
     background-color: black;
     color: white;
-    text-align: left;
+    text-align: center;
     padding: 0px;
     margin: 0px;
+    display: inline-block;
 }
 
 nav ul {
@@ -43,7 +46,6 @@ nav {
     width: 100%;
     float: left;
     background-color: black;
-    margin-bottom: 20px;
 }
 
 a {
@@ -61,20 +63,19 @@ header>img {
 }
 
 h1 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-transform: uppercase;
     color: white;
     text-align: center;
-
 }
 
 h2 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: blue;
-    color: rgb(224, 224, 245);
-    padding: 10px;
+    color: blue;
     text-align: center;
-    margin-bottom: 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 28px;
 }
 
 h3 {
@@ -102,20 +103,20 @@ tbody {
 
 tfoot {
     font-size: 16px;
-    color: white;
-    background-color: blue;
+    color: black;
+    background-color: #d9d0d0;
     text-align: center;
+    font-weight: bold;
 }
 
 caption {
     font-family: 'Century Gothic', 'Times New Roman', serif;
     font-weight: bold;
     font-size: 20px;
-    color: white;
-    border: 1px solid #cbc6c6;
-    padding: 10px;
-    background-color: blue;
-    margin-top: 20px;
+    color: blue;
+    border: none;
+    padding-bottom: 10px;
+    background-color: white;
 }
 
 button {
@@ -139,37 +140,55 @@ legend {
 
 /*Extra CSS for project */
 
-p{
+p {
     font-size: 20px;
 }
 
+footer {
+    height: 50px;
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+}
 
-.container{
+.container {
     width: 60%;
     margin: 0 auto;
-    padding-top: 20px!important;
+    padding: 20px 0px!important;
 }
-.inputSection{
+
+.inputSection {
     background-color: white;
     color: black;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px black;
+    margin: 10px 0px;
 }
-.displaySection{
-    background-color: white;
-    color: black;
-    padding: 10px 20px;
-    box-shadow: 5px 5px 5px black;
+
+.inputSection caption {
+    text-align: left;
+}
+#homeMainSection{
+    background-color: white !important; 
+    color: black; 
+    padding: 10px;
+    box-shadow: inset 0px 6px 5px -5px black;
+
+}
+
+#welcomeHeader {
+    font-size: 60px;
 }
 
 table {
     margin: 0 auto;
-        box-shadow: 5px 5px 5px black;
-        background-color: white;
+    box-shadow: 5px 5px 5px grey;
+    background-color: white;
 
 }
-.searchResults{
+
+.searchResults {
     width: 100%;
 }
 

@@ -8,7 +8,7 @@
 </head>
 <body>
     <header id="top">  
-        <img src="img/projectLogoBanner.jpg" height="300">
+    <img src="img\projectLogoBanner.jpg" alt="EGO CSS Company Logo">
         <nav>
             <ul>
                 <li><a href="2-hr-portal.html">Home</a></li>
@@ -43,5 +43,8 @@ calculator($fuel, $mpg, $distance);
 
 ?>
 </div>
+<footer>
+    <a href="2-hr-portal.html">Return to HR Portal Main Page</a>
+</footer>
 </body>
 </html>

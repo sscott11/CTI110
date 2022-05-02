@@ -8,7 +8,7 @@
 </head>
 <body>
     <header id="top">
-        <img src="img\projectLogoBanner.jpg" width="100%;">
+	<img src="img\projectLogoBanner.jpg" alt="EGO CSS Company Logo">
         <nav>
             <ul>
                 <li><a href="2-hr-portal.html">Home</a></li>
@@ -28,6 +28,8 @@
         <h1>Search By Department</h1>
 		<div class="inputSection">
         <div class="search">
+		<fieldset>
+        	<legend>Employee Department</legend>
 			<form id="departmentForm" action="#" method="post">
 				<label for="department">Select Department: </label><br>
 				<select name="departmentName" class="departmentName">
@@ -40,6 +42,7 @@
 				</select>
 				<button type="submit">Search</button>
 			</form>
+			</fieldset>
         </div>
 		</div>
 
@@ -50,8 +53,8 @@
 				$queryDept = "SELECT department_name FROM departments WHERE department_id = ".$departmentName;
 				$displayResult = $mysql->query($queryNames);
 				$departmentResult = $mysql->query($queryDept);
-				echo "<h2>Search Results</h2>";
-				echo "<table class='searchResults'><thead><tr><th colspan=2>";
+				echo "<div class='inputSection'>";
+				echo "<table class='searchResults'><caption>Search Results</caption><thead><tr><th colspan=2>";
 				foreach ($departmentResult as $topper) echo $topper['department_name'];
 				echo "</th></tr></thead><tbody>";
 				
@@ -66,11 +69,14 @@
 						echo "</td>";
 						echo "</tr>";
 					}
-				echo "</tbody>";
+				echo "</tbody></table></div>";
 		
 			}
 		?>
 			</div>
+	<footer>
+		<a href="2-hr-portal.html">Return to HR Portal Main Page</a>
+	</footer>
 </body>
 
 </html>
