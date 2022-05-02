@@ -9,13 +9,18 @@
 <body>
     <header id="top">  
         <img src="img/projectLogoBanner.jpg" height="300">
-        <nav class="navMenu">
-            <a href="2-hr-portal.html">Home</a>
-            <a href="searchByLastName.html">Search by Last Name</a>
-            <a href="searchByJobTitle.html">Search by Job Title</a>
-            <a href="fuel_calculator.html" class="highlightedNav">Fuel Calculator</a>
+        <nav>
+            <ul>
+                <li><a href="2-hr-portal.html">Home</a></li>
+                <li><a href="searchByLastName.html">Search By Last Name</a></li>
+                <li><a href="searchByJobTitle.html">Search By Job Title</a></li>
+                <li><a href="searchByDepartment.php">Search By Department</a></li>
+                <li><a href="fuel_calculator.html" class="highlightedNav">Fuel Calculator</a></li>
+            </ul>
         </nav>
-    </header>   
+    </header>
+    <div class="container">
+    <h1>Fuel Calculator Results</h1>
 
     <?php
 
@@ -28,7 +33,7 @@ function calculator($fuel, $mpg, $distance)
    {
     
     $result = $distance / $mpg * $fuel;
-    echo "<p>The total cost for your trip is $" . number_format($result,2) . ".</p>";
+    echo "<p>The total cost for your trip is <b>$" . number_format($result,2) . "</b>.</p>";
     echo "<p>Click the link to calculate another trip.</p>";
     echo "<button type='button' name='reset'><a id='return' href='fuel_calculator.html'>Return to Fuel Calculator</a></button>";
 
@@ -37,5 +42,6 @@ function calculator($fuel, $mpg, $distance)
 calculator($fuel, $mpg, $distance);
 
 ?>
+</div>
 </body>
 </html>

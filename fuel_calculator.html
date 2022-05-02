@@ -1,51 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=width-device initial-scale=1.0">
     <title>EGO CSS Human Resources</title>
     <link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
+
 <body>
     <header id="top">
         <img src="img\projectLogoBanner.jpg" width="100%;">
-        <nav class="navMenu">
-	    <ul>
-	    	<li><a href="2-hr-portal.html" class="highlightedNav">Home</a></li>
-            	<li><a href="searchByLastName.html">Search By Last Name</a><li>
-		<li><a href="searchByJobTitle.html">Search By Job Title</a></li>
-		<li><a href="searchByDepartment.php">Search By Department</a></li>
-		<li><a href="fuel_calculator.html">Fuel Calculator</a></li>
-	    </ul>	    
+        <nav>
+            <ul>
+                <li><a href="2-hr-portal.html">Home</a></li>
+                <li><a href="searchByLastName.html">Search By Last Name</a></li>
+                <li><a href="searchByJobTitle.html">Search By Job Title</a></li>
+                <li><a href="searchByDepartment.php">Search By Department</a></li>
+                <li><a href="fuel_calculator.html" class="highlightedNav">Fuel Calculator</a></li>
+            </ul>
         </nav>
     </header>
-    <main>
+    <div class="container">
         <h1>Fuel Calculator</h1>
-        <p><b>This program was created to help estimate the cost of fuel for a road trip. You need to know the approximate cost of gas, your car's mpg, and the distance the trip.</b></p> 
-  
-        
-              <form id="calculator" action="calculator.php" method="post">
-                  <fieldset>
-                      <legend class="labels">Fuel Cost Calculator</legend>  
-                      <label for="fuel">Estimated Fuel Cost</label>
-                          <input id="fuel" type="text" name="fuel" required><br>
-                      
-                      <label for="mpg">Car's MPG</label>     
-                          <input id="mpg" type="text" name="mpg" required><br>
-                      
-                      <label for="miles">Trip Distance (Miles)</label>
-                          <input id="miles" type="text" name="distance" required><br>
-                  </fieldset>        
-              </form>
+        <p><b>This program was created to help estimate the cost of fuel for a road trip. You need to know the
+                approximate cost of gas, your car's mpg, and the distance the trip.</b></p>
 
-              <button class="labels" type="submit" form="calculator">Submit</button>  
-         
+        <div class="inputSection">
+            <form id="calculator" action="calculator.php" method="post">
+                <fieldset>
+                    <legend class="labels">Fuel Cost Calculator</legend>
+                    <label for="fuel">Estimated Fuel Cost</label><br>
+                    <input id="fuel" type="text" name="fuel" required><br>
+
+                    <label for="mpg">Car's MPG</label><br>
+                    <input id="mpg" type="text" name="mpg" required><br>
+
+                    <label for="miles">Trip Distance (Miles)</label><br>
+                    <input id="miles" type="text" name="distance" required><br>
+                </fieldset>
+            </form>
+
+            <button class="labels" type="submit" form="calculator">Submit</button>
+
+        </div>
 
 
-
-    </main>
+    </div>
 </body>
 <footer>
     <a href="2-hr-portal.html">Return to HR Portal Main Page</a>
 </footer>
+
 </html>

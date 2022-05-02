@@ -1,94 +1,212 @@
-/*CSS for site */
-* {
+/*Required CSS for project */
+body {
+    background-color: #2E2C2C;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
-
 }
-header{
 
+header {
+    background-color: black;
+    color: white;
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
 }
-h1{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+nav ul {
+    list-style-type: none;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
     text-transform: uppercase;
+    font-size: 18px;
 }
-h2{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
-}
-h3{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+nav a {
+    padding: 10px 20px;
 
 }
 
-main{
-    margin: 20px;
+ul {
+    list-style-type: none;
+    padding: 10px;
+    border: none;
 }
- header > img{
+
+li {
+    border: none;
+    padding: 0px;
+    display: inline-block;
+}
+
+nav {
+    width: 100%;
+    float: left;
+    background-color: black;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+
+}
+
+header>img {
+    border: none;
     width: 100%;
     object-fit: cover;
     display: block;
-  }
-table{
-    margin: 0 auto;
 }
-th, td, thead {
-    padding: 5px 10px;
-}
-.navMenu{
-    background-color: black;
-    display: flex;
-    padding: 10px;
-    justify-content: space-evenly;
-}
-.navMenu a{
-    font-weight: bold;
-    text-decoration: none;
+
+h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-transform: uppercase;
     color: white;
-    padding: 10px;
-    font-size: 18px;
+    text-align: center;
+
 }
-.navMenu a:hover, .highlightedNav{
+
+h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: blue;
+    color: rgb(224, 224, 245);
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+h3 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: red;
+}
+
+table,
+th,
+td {
+    border: 1px solid #cbc6c6;
+    padding: 5px;
+}
+
+thead {
+    background-color: #d9d0d0;
+    color: black;
+    padding: 5px;
+    font-size: 20px;
+}
+
+tbody {
+    color: black;
+}
+
+tfoot {
+    font-size: 16px;
+    color: white;
+    background-color: blue;
+    text-align: center;
+}
+
+caption {
+    font-family: 'Century Gothic', 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    border: 1px solid #cbc6c6;
+    padding: 10px;
+    background-color: blue;
+    margin-top: 20px;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+legend {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+
+/*Extra CSS for project */
+
+p{
+    font-size: 20px;
+}
+
+
+.container{
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 20px!important;
+}
+.inputSection{
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+}
+.displaySection{
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    box-shadow: 5px 5px 5px black;
+}
+
+table {
+    margin: 0 auto;
+        box-shadow: 5px 5px 5px black;
+        background-color: white;
+
+}
+.searchResults{
+    width: 100%;
+}
+
+
+
+nav a:hover,
+.highlightedNav {
     background-color: #C40202;
     border-radius: 5px;
 
 }
-select{
-	color:black;
+
+select {
+    color: black;
 }
 
-.dynList{
-	color:black;
+.dynList {
+    color: black;
 }
-button{
-    border: none;
-    padding: 10px 20px;
-    color: white;
-    background-color: blue;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-label{
-    font-size: 16px;
+
+label {
+    font-size: 20px;
     margin-right: 10px;
 }
-input{
+
+input,
+select {
     padding: 10px;
     color: black;
     border-radius: 5px;
     font-size: 16px;
+    width: 250px;
+    border: none;
+    background-color: #dfd6d6;
 }
-fieldset{
+
+fieldset {
     padding: 20px;
     margin-bottom: 10px;
-}
-fieldset > legend{
-    font-weight: bold;
-    font-size: 20px;
-
-}
-body{
-    background-color: #2E2C2C;
-
 }

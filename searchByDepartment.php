@@ -9,14 +9,14 @@
 <body>
     <header id="top">
         <img src="img\projectLogoBanner.jpg" width="100%;">
-        <nav class="navMenu">
-	    <ul>
-	    	<li><a href="2-hr-portal.html" class="highlightedNav">Home</a></li>
-            	<li><a href="searchByLastName.html">Search By Last Name</a><li>
-		<li><a href="searchByJobTitle.html">Search By Job Title</a></li>
-		<li><a href="searchByDepartment.php">Search By Department</a></li>
-		<li><a href="fuel_calculator.html">Fuel Calculator</a></li>
-	    </ul>	    
+        <nav>
+            <ul>
+                <li><a href="2-hr-portal.html">Home</a></li>
+                <li><a href="searchByLastName.html">Search By Last Name</a></li>
+                <li><a href="searchByJobTitle.html">Search By Job Title</a></li>
+                <li><a href="searchByDepartment.php" class="highlightedNav">Search By Department</a></li>
+                <li><a href="fuel_calculator.html">Fuel Calculator</a></li>
+            </ul>
         </nav>
     </header>
 	<?php
@@ -24,11 +24,12 @@
 		$query = "SELECT department_name, department_id FROM departments";
 		$result = $mysql->query($query);
 	?>
-    <main>
+	<div class="container">
         <h1>Search By Department</h1>
+		<div class="inputSection">
         <div class="search">
 			<form id="departmentForm" action="#" method="post">
-				<label for="department">Department: </label>
+				<label for="department">Select Department: </label><br>
 				<select name="departmentName" class="departmentName">
 				<?php
 					foreach ($result as $row)
@@ -40,7 +41,8 @@
 				<button type="submit">Search</button>
 			</form>
         </div>
-		
+		</div>
+
 		<?php
 			if(isset($_POST['departmentName'])){
 				$departmentName = $_POST['departmentName'];
@@ -48,8 +50,8 @@
 				$queryDept = "SELECT department_name FROM departments WHERE department_id = ".$departmentName;
 				$displayResult = $mysql->query($queryNames);
 				$departmentResult = $mysql->query($queryDept);
-				
-				echo "<table><thead><tr><th colspan=2>";
+				echo "<h2>Search Results</h2>";
+				echo "<table class='searchResults'><thead><tr><th colspan=2>";
 				foreach ($departmentResult as $topper) echo $topper['department_name'];
 				echo "</th></tr></thead><tbody>";
 				
@@ -68,8 +70,7 @@
 		
 			}
 		?>
-			
-    </main>
+			</div>
 </body>
 
 </html>
