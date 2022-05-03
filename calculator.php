@@ -12,8 +12,8 @@
         <nav>
             <ul>
                 <li><a href="2-hr-portal.html">Home</a></li>
-                <li><a href="searchByLastName.html">Search By Last Name</a></li>
-                <li><a href="searchByJobTitle.html">Search By Job Title</a></li>
+                <li><a href="searchByLastName.php">Search By Last Name</a></li>
+                <li><a href="searchByJobTitle.php">Search By Job Title</a></li>
                 <li><a href="searchByDepartment.php">Search By Department</a></li>
                 <li><a href="fuel_calculator.html" class="highlightedNav">Fuel Calculator</a></li>
             </ul>
