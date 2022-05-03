@@ -38,19 +38,22 @@
 			$mysql = new mysqli("localhost","cti110","wtcc","hr");
 			if(isset($_POST['lastName'])){
 				$lastName = $_POST['lastName'];
-				$queryNames = "SELECT first_name,last_name,email,phone_number FROM employees WHERE last_name = '".$lastName."'";
+				$queryNames = "SELECT employees.employee_id,employees.first_name,employees.last_name,employees.job_id, jobs.job_title, employees.salary FROM employees INNER JOIN jobs ON employees.job_id = jobs.job_id WHERE employees.last_name = '".$lastName."'";
 				$displayResult = $mysql->query($queryNames);
 				echo "<div class='inputSection'>";
 				echo "<table class='searchResults'><caption>Search Results</caption>";
 				if (mysqli_num_rows($displayResult) != 0)
 				{
 					
-					echo "<tr><th>First Name</th><th>Last Name</th><th>Email</th><th>Phone Number</th></tr>";
+					echo "<tr><th>Employee ID</th><th>First Name</th><th>Last Name</th><th>Job ID</th><th>Job Title</th><th>Salary</th></tr>";
 					echo "<tbody>";
 				
 					foreach ($displayResult as $nameRow)
 					{
 						echo "<tr>";
+						echo "<td>";
+						echo $nameRow['employee_id'];
+						echo "</td>";
 						echo "<td>";
 						echo $nameRow['first_name'];
 						echo "</td>";
@@ -58,10 +61,13 @@
 						echo $nameRow['last_name'];
 						echo "</td>";
 						echo "<td>";
-						echo $nameRow['email'];
+						echo $nameRow['job_id'];
 						echo "</td>";
 						echo "<td>";
-						echo $nameRow['phone_number'];
+						echo $nameRow['job_title'];
+						echo "</td>";
+						echo "<td>";
+						echo $nameRow['salary'];
 						echo "</td>";
 						echo "</tr>";
 					}
