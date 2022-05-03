@@ -10,7 +10,7 @@
 
 <body>
     <header id="top">
-        <img src="img\projectLogoBanner.jpg" alt="EGO CSS Company Logo">
+        <img src="img/projectLogoBanner.jpg" alt="EGO CSS Company Logo">
         <nav>
             <ul>
                 <li><a href="2-hr-portal.html">Home</a></li>
@@ -29,22 +29,21 @@
     <div class="container" id="container">
         <h1>Search by Job Title</h1>
         <div class="inputSection">
-		
-            <fieldset>
+		<form id="jobTitleForm" action="#container" method="post">
+			<fieldset>
                 <legend class="labels">Employee Job Title</legend>
-				<form id="jobTitleForm" action="#container" method="post">
-					<label for="jobTitle">Select Job Title: </label><br>
-					<select name="jobTitles" class="jobTitles">
+				<label for="jobTitle">Select Job Title: </label><br>
+				<select name="jobTitles" class="jobTitles">
 					<?php
 						foreach ($result as $row)
 						{
 							echo "<option class='dynList' value='".$row['job_id']."'>".$row['job_title']."</option>";
 						}
 					?>
-					</select>
-				</fieldset>
-            <button type="submit">Search</button>
-				</form>
+				</select>
+            	<button type="submit">Search</button>
+			</fieldset>
+		</form>
         </div>
 			
 		<?php

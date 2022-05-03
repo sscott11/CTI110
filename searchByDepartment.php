@@ -10,7 +10,7 @@
 
 <body>
     <header id="top">
-		<img src="img\projectLogoBanner.jpg" alt="EGO CSS Company Logo">
+		<img src="img/projectLogoBanner.jpg" alt="EGO CSS Company Logo">
         <nav>
             <ul>
                 <li><a href="2-hr-portal.html">Home</a></li>
@@ -30,20 +30,20 @@
         <h1>Search By Department</h1>
 		<div class="inputSection">
         <div class="search">
-		<fieldset>
-        	<legend>Employee Department</legend>
 			<form id="departmentForm" action="#container" method="post">
+			<fieldset>
+				<legend>Employee Department</legend>
 				<label for="department">Select Department: </label><br>
 				<select name="departmentName" class="departmentName">
-				<?php
-					foreach ($result as $row)
-					{
-						echo "<option class='dynList' value='".$row['department_id']."'>".$row['department_name']."</option>";
-					}
-				?>				
+					<?php
+						foreach ($result as $row)
+						{
+							echo "<option class='dynList' value='".$row['department_id']."'>".$row['department_name']."</option>";
+						}
+					?>				
 				</select>
+					<button type="submit">Search</button>
 			</fieldset>
-			<button type="submit">Search</button>
 			</form>
 
         </div>

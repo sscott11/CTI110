@@ -8,7 +8,7 @@
 </head>
 <body>
     <header id="top">  
-    <img src="img\projectLogoBanner.jpg" alt="EGO CSS Company Logo">
+    <img src="img/projectLogoBanner.jpg" alt="EGO CSS Company Logo">
         <nav>
             <ul>
                 <li><a href="2-hr-portal.html">Home</a></li>

@@ -10,7 +10,7 @@
 
 <body>
     <header id="top">
-        <img src="img\projectLogoBanner.jpg" alt="EGO CSS Company Logo">
+        <img src="img/projectLogoBanner.jpg" alt="EGO CSS Company Logo">
         <nav>
             <ul>
                 <li><a href="2-hr-portal.html">Home</a></li>
@@ -29,9 +29,9 @@
                 <legend class="labels">Employee Last Name</legend>
                 <label for="lastName">Enter Last Name:</label><br>
                 <input type="text" id="lastName" name="lastName" required />
+				<button class="labels" type="submit" form="employeeDatabase">Search</button>
             </fieldset>
         </form>
-        <button class="labels" type="submit" form="employeeDatabase">Search</button>
     </div>
 	
 			<?php
