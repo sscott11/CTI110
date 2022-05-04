@@ -33,7 +33,7 @@
 			<fieldset>
                 <legend class="labels">Employee Job Title</legend>
 				<label for="jobTitle">Select Job Title: </label><br>
-				<select name="jobTitles" class="jobTitles">
+				<select name="jobTitles" class="jobTitles" id="jobTitle">
 					<?php
 						foreach ($result as $row)
 						{

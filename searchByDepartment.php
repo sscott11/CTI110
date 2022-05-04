@@ -33,8 +33,8 @@
 			<form id="departmentForm" action="#container" method="post">
 			<fieldset>
 				<legend>Employee Department</legend>
-				<label for="department">Select Department: </label><br>
-				<select name="departmentName" class="departmentName">
+				<label for="departmentName">Select Department: </label><br>
+				<select name="departmentName" id="departmentName" class="departmentName">
 					<?php
 						foreach ($result as $row)
 						{

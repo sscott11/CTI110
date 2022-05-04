@@ -73,7 +73,7 @@
 					}
 					echo "</tbody>";
 				} else {
-					echo "<tr><td>*No Results Found.</td></tr>";
+					echo "<tr><td colspan='6'>*No Results Found.</td></tr>";
 				}
 				echo "</table></div>";
 		

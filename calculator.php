@@ -8,7 +8,7 @@
 </head>
 <body>
     <header id="top">  
-    <img src="img\projectLogoBanner.jpg" alt="EGO CSS Company Logo">
+    <img src="img/projectLogoBanner.jpg" alt="EGO CSS Company Logo">
         <nav>
             <ul>
                 <li><a href="2-hr-portal.html">Home</a></li>
@@ -21,7 +21,7 @@
     </header>
     <div class="container" id="container">
     <h1>Fuel Calculator</h1>    
-        <div class="inputSection" id="inputSection">
+        <div class="inputSection">
         <p><b>This program was created to help estimate the cost of fuel for a road trip. You need to know the
                 approximate cost of gas, your car's mpg, and the distance the trip.</b></p>
 
@@ -30,13 +30,14 @@
                 <fieldset>
                     <legend class="labels">Fuel Cost Calculator</legend>
                         <label for="fuel">Estimated Fuel Cost</label><br>
-                        <input id="fuel" type="float" name="fuel" min="0" required><br>
-
+                        <input id="fuel" type="number" step="0.01" name="fuel" min=".01" required><br>
+                        <small>Must be greater than 0. No more than 2 decimal places.</small><br>
                         <label for="mpg">Car's MPG</label><br>
-                        <input id="mpg" type="float" name="mpg" min="5" required><br>
-
+                        <input id="mpg" type="number" step="0.01" name="mpg" min="5" required><br>
+                        <small>Minimum of 5 MPG. No more than 2 decimal places.</small><br>
                         <label for="miles">Trip Distance (Miles)</label><br>
-                        <input id="miles" type="float" name="distance" min="1" required><br>
+                        <input id="miles" type="number" step="0.01" name="distance" min="1" required><br>
+                        <small>Minimum of 1 mile. No more than 2 decimal places.</small>
                 </fieldset>
             </form>
 
@@ -56,7 +57,7 @@ function calculator($fuel, $mpg, $distance)
 	//New Table Code
 	echo "<div class='inputSection'>";
 	echo "<table class='searchResults'><caption>Fuel Calculator Results</caption><thead><tr><th colspan=4>";
-	echo "<img src='img/egoGasGauge.png' width='100' height='100' alt='Gas gauge image with company logo'>";
+	echo "<img id='fuelGauge' src='img/egoGasGauge.png' alt='Gas gauge image with company logo'>";
 	echo "</th></tr></thead>";
 	echo "<tr><th>Fuel Cost</th><th>MPG</th><th>Trip Distance</th><th>Cost</th></tr>";
 	echo "<tbody>";
@@ -89,15 +90,16 @@ function checkPositiveNum($fuel, $mpg, $distance)
         calculator($fuel, $mpg, $distance); 
         
      } else {
-         echo "<p>Please Enter a Valid Number:</p>";
+         echo "<div class='inputSection'>"; 
+         echo "<h3>Please Enter a Valid Number:</h3>";
          echo "<ul><li><b>- Entry must be a positive number</b></li><br>";
-         echo "<li><b>- \"0\" is not a valid entry</b></li></ul>";
+         echo "<li><b>- \"0\" is not a valid entry</b></li></ul></div>";
      }     
 }
 
 if ((isset($_POST["fuel"])) && (isset($_POST["mpg"])) && (isset($_POST["distance"]))) 
     {
-        echo "<div class='inputSection' id='output'>"; 
+        echo "<div id='output'>"; 
 		$fuel = $_POST["fuel"];
         $mpg = $_POST["mpg"];
         $distance = $_POST["distance"];
