@@ -43,21 +43,31 @@
             <button class="labels" type="submit" form="calculator">Submit</button>
 
         </div>
-  <div class="output" id="output"> 
     <?php
 
 
     
 
-
     
 function calculator($fuel, $mpg, $distance) 
    {
-     
-    echo "<h1>Fuel Calculator Results</h1>";
-    echo "<h1><img src='img/egoGasGauge.png' width='100' height='100' alt='Gas gauge image with company logo'></h1>"; 
     $result = $distance / $mpg * $fuel;
-    echo "<p>The total cost of fuel for your trip is <b>$" . number_format($result,2) . "</b>.</p>";
+    
+	//New Table Code
+	echo "<div class='inputSection'>";
+	echo "<table class='searchResults'><caption>Fuel Calculator Results</caption><thead><tr><th colspan=4>";
+	echo "<img src='img/egoGasGauge.png' width='100' height='100' alt='Gas gauge image with company logo'>";
+	echo "</th></tr></thead>";
+	echo "<tr><th>Fuel Cost</th><th>MPG</th><th>Trip Distance</th><th>Cost</th></tr>";
+	echo "<tbody>";
+	echo "<tr><td>".$fuel."</td><td>".$mpg."</td><td>".$distance."</td><td><b>$".number_format($result,2)."</b></td></tr>";
+	echo "</tbody></table></div>";
+
+
+	//Replaced Code
+	//echo "<h1>Fuel Calculator Results</h1>";
+    //echo "<h1><img src='img/egoGasGauge.png' width='100' height='100' alt='Gas gauge image with company logo'></h1>"; 
+    //echo "<p>The total cost of fuel for your trip is <b>$" . number_format($result,2) . "</b>.</p>";
     
  
    }
@@ -87,15 +97,17 @@ function checkPositiveNum($fuel, $mpg, $distance)
 
 if ((isset($_POST["fuel"])) && (isset($_POST["mpg"])) && (isset($_POST["distance"]))) 
     {
-        $fuel = $_POST["fuel"];
+        echo "<div class='inputSection' id='output'>"; 
+		$fuel = $_POST["fuel"];
         $mpg = $_POST["mpg"];
         $distance = $_POST["distance"];
-        numericCheck($fuel, $mpg, $distance);
+        numericCheck($fuel, $mpg, $distance);  
+		echo "</div>";
+
     }
 
 
     ?>
-  </div>
 </div>
 <footer>
     <a href="2-hr-portal.html">Return to HR Portal Main Page</a>
