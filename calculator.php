@@ -26,27 +26,30 @@
         </nav>
     </header>
     <div class="container" id="container">
-    <h1>Fuel Calculator</h1>    
+        <h1>Fuel Calculator</h1>
         <div class="inputSection">
-        <p><b>This program was created to help estimate the cost of fuel for a road trip. You need to know the
-                approximate cost of gas, your car's mpg, and the distance the trip.</b></p>
-
-        
-            <form id="calculator" action="#output" method="post">
-                <fieldset>
+            <p><b>This program was created to help estimate the cost of fuel for a road trip. You need to know the
+                    approximate cost of gas, your car's mpg, and the distance the trip.</b></p>
+            <form id="calculator" action="calculator.php#output" method="post">
+                <fieldset id="calculateFuelCost">
                     <legend class="labels">Fuel Cost Calculator</legend>
+                    <div style="width: 45%; min-width: 250px;">
                         <label for="fuel">Estimated Fuel Cost</label><br>
-                        <input id="fuel" type="number" step="0.01" name="fuel" min=".01" required><br>
-                        <small>Must be greater than 0. No more than 2 decimal places.</small><br>
+                        <input id="fuel" type="number" step="0.01" name="fuel" min=".01" placeholder="$" required><br>
+                        <small>Must be greater than 0. (Max of 2 decimal places.)</small><br>
                         <label for="mpg">Car's MPG</label><br>
                         <input id="mpg" type="number" step="0.01" name="mpg" min="5" required><br>
-                        <small>Minimum of 5 MPG. No more than 2 decimal places.</small><br>
+                        <small>Minimum of 5 MPG. (Max of 2 decimal places.)</small><br>
                         <label for="miles">Trip Distance (Miles)</label><br>
                         <input id="miles" type="number" step="0.01" name="distance" min="1" required><br>
-                        <small>Minimum of 1 mile. No more than 2 decimal places.</small>
+                        <small>Minimum of 1 mile. (Max of 2 decimal places.)</small>
+                        <button class="labels" type="submit" form="calculator">Submit</button>
+                    </div>
+                    <div style="width: 350px;">
+                        <img src="img/egoGasGauge.png" alt="Gas gauge image with company logo">
+                    </div>
                 </fieldset>
             </form>
-            <button class="labels" type="submit" form="calculator">Submit</button>
         </div>
     <?php
 
@@ -57,9 +60,7 @@ function calculator($fuel, $mpg, $distance)
     
 	//New Table Code
 	echo "<div class='inputSection'>";
-	echo "<table class='searchResults'><caption>Fuel Calculator Results</caption><thead><tr><th colspan=4>";
-	echo "<img id='fuelGauge' src='img/egoGasGauge.png' alt='Gas gauge image with company logo'>";
-	echo "</th></tr></thead>";
+	echo "<table class='searchResults'><caption>Fuel Calculator Results</caption><thead><tr><th colspan=4>Cost of Trip</th></tr></thead>";
 	echo "<tr><th>Fuel Cost</th><th>MPG</th><th>Trip Distance</th><th>Cost</th></tr>";
 	echo "<tbody>";
 	echo "<tr><td>".$fuel."</td><td>".$mpg."</td><td>".$distance."</td><td><b>$".number_format($result,2)."</b></td></tr>";
