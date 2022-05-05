@@ -47,7 +47,7 @@
 				$queryNames = "SELECT employees.employee_id,employees.first_name,employees.last_name,employees.job_id, jobs.job_title, employees.salary FROM employees INNER JOIN jobs ON employees.job_id = jobs.job_id WHERE employees.last_name = \"".$lastName."\"";
 				$displayResult = $mysql->query($queryNames);
 				echo "<div class='inputSection'>";
-				echo "<table class='searchResults'><caption>Search Results " . $lastName ."</caption>";
+				echo "<table class='searchResults'><caption>Search Results for ".$lastName."</caption>";
 				if (mysqli_num_rows($displayResult) != 0)
 				{
 					
