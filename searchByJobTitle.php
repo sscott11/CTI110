@@ -14,10 +14,10 @@
         <nav>
             <ul>
                 <li><a href="2-hr-portal.html">Home</a></li>
-                <li><a href="searchByLastName.php">Search By Last Name</a></li>
-                <li><a href="searchByJobTitle.php" class="highlightedNav">Search By Job Title</a></li>
-                <li><a href="searchByDepartment.php">Search By Department</a></li>
-                <li><a href="calculator.php">Fuel Calculator</a></li>
+                <li><a href="searchByLastName.html">Search By Last Name</a></li>
+                <li><a href="searchByJobTitle.html" class="highlightedNav">Search By Job Title</a></li>
+                <li><a href="searchByDepartment.html">Search By Department</a></li>
+                <li><a href="calculator.html">Fuel Calculator</a></li>
             </ul>
         </nav>
     </header>
