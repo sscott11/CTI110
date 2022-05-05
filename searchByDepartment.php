@@ -23,7 +23,7 @@
     </header>
 	<?php
 		$mysql = new mysqli("localhost","cti110","wtcc","hr");
-		$query = "SELECT department_name, department_id FROM departments";
+		$query = "SELECT department_name, department_id FROM departments ORDER BY department_name";
 		$result = $mysql->query($query);
 	?>
 	<div class="container" id="container">

@@ -23,7 +23,7 @@
     </header>
 	<?php
 		$mysql = new mysqli("localhost","cti110","wtcc","hr");
-		$query = "SELECT job_id, job_title FROM jobs";
+		$query = "SELECT job_id, job_title FROM jobs ORDER BY job_title";
 		$result = $mysql->query($query);
 	?>	
     <div class="container" id="container">
