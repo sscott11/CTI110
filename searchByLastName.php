@@ -37,8 +37,8 @@
 			<?php
 			$mysql = new mysqli("localhost","cti110","wtcc","hr");
 			if(isset($_POST['lastName'])){
-				$lastName = $_POST['lastName'];
-				$queryNames = "SELECT employees.employee_id,employees.first_name,employees.last_name,employees.job_id, jobs.job_title, employees.salary FROM employees INNER JOIN jobs ON employees.job_id = jobs.job_id WHERE employees.last_name = '".$lastName."'";
+				$lastName = htmlspecialchars($_POST['lastName']);
+				$queryNames = "SELECT employees.employee_id,employees.first_name,employees.last_name,employees.job_id, jobs.job_title, employees.salary FROM employees INNER JOIN jobs ON employees.job_id = jobs.job_id WHERE employees.last_name = \"".$lastName."\"";
 				$displayResult = $mysql->query($queryNames);
 				echo "<div class='inputSection'>";
 				echo "<table class='searchResults'><caption>Search Results</caption>";
