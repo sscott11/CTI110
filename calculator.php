@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--
+	Filename: calculator.php
+    Class Section: CTI.110.0003
+    Group: 2
+    Purpose: Calculate and Display Fuel Cost for Trip
+	-->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=width-device initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EGO CSS Human Resources</title>
     <link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
@@ -40,14 +46,9 @@
                         <small>Minimum of 1 mile. No more than 2 decimal places.</small>
                 </fieldset>
             </form>
-
             <button class="labels" type="submit" form="calculator">Submit</button>
-
         </div>
     <?php
-
-
-    
 
     
 function calculator($fuel, $mpg, $distance) 

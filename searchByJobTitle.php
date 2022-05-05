@@ -2,8 +2,14 @@
 <html lang="en">
 
 <head>
+	<!--
+	Filename: searchByJobTitle.php
+    Class Section: CTI.110.0003
+    Group: 2
+    Purpose: Search for and Display Employees by Job Title
+	-->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=width-device initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EGO CSS Human Resources</title>
     <link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
@@ -29,21 +35,21 @@
     <div class="container" id="container">
         <h1>Search by Job Title</h1>
         <div class="inputSection">
-		<form id="jobTitleForm" action="#container" method="post">
-			<fieldset>
-                <legend class="labels">Employee Job Title</legend>
-				<label for="jobTitle">Select Job Title: </label><br>
-				<select name="jobTitles" class="jobTitles" id="jobTitle">
-					<?php
-						foreach ($result as $row)
-						{
-							echo "<option class='dynList' value='".$row['job_id']."'>".$row['job_title']."</option>";
-						}
-					?>
-				</select>
-            	<button type="submit">Search</button>
-			</fieldset>
-		</form>
+			<form id="jobTitleForm" action="#container" method="post">
+				<fieldset>
+					<legend class="labels">Employee Job Title</legend>
+					<label for="jobTitle">Select Job Title: </label><br>
+					<select name="jobTitles" class="jobTitles" id="jobTitle">
+						<?php
+							foreach ($result as $row)
+							{
+								echo "<option class='dynList' value='".$row['job_id']."'>".$row['job_title']."</option>";
+							}
+						?>
+					</select>
+					<button type="submit">Search</button>
+				</fieldset>
+			</form>
         </div>
 			
 		<?php

@@ -2,8 +2,14 @@
 <html lang="en">
 
 <head>
+	<!--
+	Filename: searchByLastName.php
+    Class Section: CTI.110.0003
+    Group: 2
+    Purpose: Search for and Display Employees by Last Name
+	-->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=width-device initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EGO CSS Human Resources</title>
     <link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
@@ -22,17 +28,17 @@
         </nav>
     </header>
     <div class="container" id="container">
-        <h1>Search By Last Name</h1>
-        <div class="inputSection">
-        <form id="employeeDatabase" action="#container" method="post">
-            <fieldset>
-                <legend class="labels">Employee Last Name</legend>
-                <label for="lastName">Enter Last Name:</label><br>
-                <input type="text" id="lastName" name="lastName" required />
-				<button class="labels" type="submit" form="employeeDatabase">Search</button>
-            </fieldset>
-        </form>
-    </div>
+			<h1>Search By Last Name</h1>
+			<div class="inputSection">
+				<form id="employeeDatabase" action="#container" method="post">
+					<fieldset>
+						<legend class="labels">Employee Last Name</legend>
+						<label for="lastName">Enter Last Name:</label><br>
+						<input type="text" id="lastName" name="lastName" required />
+						<button class="labels" type="submit" form="employeeDatabase">Search</button>
+					</fieldset>
+				</form>
+			</div>
 	
 			<?php
 			$mysql = new mysqli("localhost","cti110","wtcc","hr");

@@ -2,8 +2,14 @@
 <html lang="en">
 
 <head>
+	<!--
+	Filename: searchByDepartment.php
+    Class Section: CTI.110.0003
+    Group: 2
+    Purpose: Search for and Display Employees by Department
+	-->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=width-device initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EGO CSS Human Resources</title>
     <link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
@@ -29,7 +35,6 @@
 	<div class="container" id="container">
         <h1>Search By Department</h1>
 		<div class="inputSection">
-        <div class="search">
 			<form id="departmentForm" action="#container" method="post">
 			<fieldset>
 				<legend>Employee Department</legend>
@@ -45,9 +50,7 @@
 					<button type="submit">Search</button>
 			</fieldset>
 			</form>
-
         </div>
-		</div>
 
 		<?php
 			if(isset($_POST['departmentName'])){

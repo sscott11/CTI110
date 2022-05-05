@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!--
+	Filename: calculator.html
+    Class Section: CTI.110.0003
+    Group: 2
+    Purpose: Calculate Fuel Cost for Trip
+	-->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=width-device initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EGO CSS Human Resources</title>
     <link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
+
 <body>
-    <header id="top">  
-    <img src="img/projectLogoBanner.jpg" alt="EGO CSS Company Logo">
+    <header id="top">
+        <img src="img/projectLogoBanner.jpg" alt="EGO CSS Company Logo">
         <nav>
             <ul>
                 <li><a href="2-hr-portal.html">Home</a></li>
@@ -20,34 +28,30 @@
         </nav>
     </header>
     <div class="container" id="container">
-    <h1>Fuel Calculator</h1>    
+        <h1>Fuel Calculator</h1>
         <div class="inputSection">
-        <p><b>This program was created to help estimate the cost of fuel for a road trip. You need to know the
-                approximate cost of gas, your car's mpg, and the distance the trip.</b></p>
-
-        
+            <p><b>This program was created to help estimate the cost of fuel for a road trip. You need to know the
+                    approximate cost of gas, your car's mpg, and the distance the trip.</b></p>
             <form id="calculator" action="calculator.php#output" method="post">
                 <fieldset>
                     <legend class="labels">Fuel Cost Calculator</legend>
-                        <label for="fuel">Estimated Fuel Cost</label><br>
-                        <input id="fuel" type="number" step="0.01" name="fuel" min=".01" required><br>
-                        <small>Must be greater than 0. No more than 2 decimal places.</small><br>
-                        <label for="mpg">Car's MPG</label><br>
-                        <input id="mpg" type="number" step="0.01" name="mpg" min="5" required><br>
-                        <small>Minimum of 5 MPG. No more than 2 decimal places.</small><br>
-                        <label for="miles">Trip Distance (Miles)</label><br>
-                        <input id="miles" type="number" step="0.01" name="distance" min="1" required><br>
-                        <small>Minimum of 1 mile. No more than 2 decimal places.</small>
+                    <label for="fuel">Estimated Fuel Cost</label><br>
+                    <input id="fuel" type="number" step="0.01" name="fuel" min=".01" required><br>
+                    <small>Must be greater than 0. No more than 2 decimal places.</small><br>
+                    <label for="mpg">Car's MPG</label><br>
+                    <input id="mpg" type="number" step="0.01" name="mpg" min="5" required><br>
+                    <small>Minimum of 5 MPG. No more than 2 decimal places.</small><br>
+                    <label for="miles">Trip Distance (Miles)</label><br>
+                    <input id="miles" type="number" step="0.01" name="distance" min="1" required><br>
+                    <small>Minimum of 1 mile. No more than 2 decimal places.</small>
                 </fieldset>
             </form>
-
             <button class="labels" type="submit" form="calculator">Submit</button>
-
         </div>
-   
-</div>
-<footer>
-    <a href="2-hr-portal.html">Return to HR Portal Main Page</a>
-</footer>
+    </div>
+    <footer>
+        <a href="2-hr-portal.html">Return to HR Portal Main Page</a>
+    </footer>
 </body>
+
 </html>
