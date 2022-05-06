@@ -3,7 +3,7 @@
 
 <head>
 	<!--
-	Filename: searchByDepartment.php
+	Filename: group2-hr-department.php
     Class Section: CTI.110.0003
     Group: 2
     Purpose: Search for and Display Employees by Department
@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EGO CSS Human Resources</title>
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/group2-hr-style.css" type="text/css">
 </head>
 
 <body>
@@ -19,11 +19,11 @@
 		<img src="img/projectLogoBanner.jpg" alt="EGO CSS Company Logo">
         <nav>
             <ul>
-                <li><a href="2-hr-portal.html">Home</a></li>
-                <li><a href="searchByLastName.html">Search By Last Name</a></li>
-                <li><a href="searchByJobTitle.html">Search By Job Title</a></li>
-                <li><a href="searchByDepartment.html" class="highlightedNav">Search By Department</a></li>
-                <li><a href="calculator.html">Fuel Calculator</a></li>
+                <li><a href="group2-hr-portal.html">Home</a></li>
+                <li><a href="group2-hr-emp-search.html">Search By Last Name</a></li>
+                <li><a href="group2-hr-job-title.html">Search By Job Title</a></li>
+                <li><a href="group2-hr-department.html" class="highlightedNav">Search By Department</a></li>
+                <li><a href="group2-hr-fuel.html">Fuel Calculator</a></li>
             </ul>
         </nav>
     </header>
@@ -95,7 +95,7 @@
 		?>
 			</div>
 	<footer>
-		<a href="2-hr-portal.html">Return to HR Portal Main Page</a>
+		<a href="group2-hr-portal.html">Return to HR Portal Main Page</a>
 	</footer>
 </body>
 
