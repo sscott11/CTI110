@@ -63,7 +63,7 @@ function calculator($fuel, $mpg, $distance)
 	echo "<table class='searchResults'><caption>Fuel Calculator Results</caption><thead><tr><th colspan=4>Cost of Trip</th></tr></thead>";
 	echo "<tr><th>Cost of Gas</th><th>MPG</th><th>Trip Distance</th><th>Total Cost</th></tr>";
 	echo "<tbody>";
-	echo "<tr><td>".$fuel."</td><td>".$mpg."</td><td>".$distance."</td><td><b>$".number_format($result,2)."</b></td></tr>";
+	echo "<tr><td>$".$fuel."</td><td>".$mpg."</td><td>".$distance." miles</td><td><b>$".number_format($result,2)."</b></td></tr>";
 	echo "</tbody></table></div>";
 
 
