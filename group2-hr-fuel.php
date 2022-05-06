@@ -29,12 +29,12 @@
         <h1>Fuel Calculator</h1>
         <div class="inputSection">
             <p><b>This program was created to help estimate the cost of fuel for a road trip. You need to know the
-                    expected cost of gas per gallon, your car's mpg, and the distance of the trip.</b></p>
+                    expected price of gas per gallon, your car's mpg, and the distance of the trip.</b></p>
             <form id="calculator" action="group2-hr-fuel.php#output" method="post">
                 <fieldset id="calculateFuelCost">
                     <legend class="labels">Fuel Cost Calculator</legend>
                     <div style="width: 45%; min-width: 250px;">
-                        <label for="fuel">Cost of Gas (Per Gallon)</label><br>
+                        <label for="fuel">Price of Gas (Per Gallon)</label><br>
                         <input id="fuel" type="number" step="0.01" name="fuel" min=".01" placeholder="$" required><br>
                         <small>Must be greater than 0. (Max of 2 decimal places.)</small><br>
                         <label for="mpg">Car's MPG</label><br>
@@ -61,7 +61,7 @@ function calculator($fuel, $mpg, $distance)
 	//New Table Code
 	echo "<div class='inputSection'>";
 	echo "<table class='searchResults'><caption>Fuel Calculator Results</caption><thead><tr><th colspan=4>Cost of Trip</th></tr></thead>";
-	echo "<tr><th>Cost of Gas</th><th>MPG</th><th>Trip Distance</th><th>Total Cost</th></tr>";
+	echo "<tr><th>Price of Gas</th><th>MPG</th><th>Trip Distance</th><th>Total Cost</th></tr>";
 	echo "<tbody>";
 	echo "<tr><td>$".$fuel."</td><td>".$mpg."</td><td>".$distance." miles</td><td><b>$".number_format($result,2)."</b></td></tr>";
 	echo "</tbody></table></div>";
