@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <!--
-	Filename: calculator.php
+	Filename: group2-hr-fuel.php
     Class Section: CTI.110.0003
     Group: 2
     Purpose: Calculate and Display Fuel Cost for Trip
@@ -10,18 +10,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EGO CSS Human Resources</title>
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/group2-hr-style.css" type="text/css">
 </head>
 <body>
     <header id="top">  
     <img src="img/projectLogoBanner.jpg" alt="EGO CSS Company Logo">
         <nav>
             <ul>
-                <li><a href="2-hr-portal.html">Home</a></li>
-                <li><a href="searchByLastName.html">Search By Last Name</a></li>
-                <li><a href="searchByJobTitle.html">Search By Job Title</a></li>
-                <li><a href="searchByDepartment.html">Search By Department</a></li>
-                <li><a href="calculator.html" class="highlightedNav">Fuel Calculator</a></li>
+                <li><a href="group2-hr-portal.html">Home</a></li>
+                <li><a href="group2-hr-emp-search.html">Search By Last Name</a></li>
+                <li><a href="group2-hr-job-title.html">Search By Job Title</a></li>
+                <li><a href="group2-hr-department.html">Search By Department</a></li>
+                <li><a href="group2-hr-fuel.html" class="highlightedNav">Fuel Calculator</a></li>
             </ul>
         </nav>
     </header>
@@ -30,7 +30,7 @@
         <div class="inputSection">
             <p><b>This program was created to help estimate the cost of fuel for a road trip. You need to know the
                     approximate cost of gas, your car's mpg, and the distance the trip.</b></p>
-            <form id="calculator" action="calculator.php#output" method="post">
+            <form id="calculator" action="group2-hr-fuel.php#output" method="post">
                 <fieldset id="calculateFuelCost">
                     <legend class="labels">Fuel Cost Calculator</legend>
                     <div style="width: 45%; min-width: 250px;">
@@ -61,7 +61,7 @@ function calculator($fuel, $mpg, $distance)
 	//New Table Code
 	echo "<div class='inputSection'>";
 	echo "<table class='searchResults'><caption>Fuel Calculator Results</caption><thead><tr><th colspan=4>Cost of Trip</th></tr></thead>";
-	echo "<tr><th>Fuel Cost</th><th>MPG</th><th>Trip Distance</th><th>Cost</th></tr>";
+	echo "<tr><th>Cost of Fuel</th><th>MPG</th><th>Trip Distance</th><th>Cost</th></tr>";
 	echo "<tbody>";
 	echo "<tr><td>".$fuel."</td><td>".$mpg."</td><td>".$distance."</td><td><b>$".number_format($result,2)."</b></td></tr>";
 	echo "</tbody></table></div>";
@@ -114,7 +114,7 @@ if ((isset($_POST["fuel"])) && (isset($_POST["mpg"])) && (isset($_POST["distance
     ?>
 </div>
 <footer>
-    <a href="2-hr-portal.html">Return to HR Portal Main Page</a>
+    <a href="group2-hr-portal.html">Return to HR Portal Main Page</a>
 </footer>
 </body>
 </html>
